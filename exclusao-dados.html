@@ -329,10 +329,10 @@
         <p class="kicker">Conta e privacidade</p>
         <h1 id="titulo-exclusao">Excluir conta e dados</h1>
         <p class="lead">
-          Entre com o mesmo e-mail e senha usados no Guardi para confirmar sua identidade. Depois da confirmação, a página chama a função segura de exclusão no Supabase.
+          Entre com o mesmo e-mail e senha usados no Guardi para confirmar sua identidade. Depois da confirmação, sua conta será excluída com segurança.
         </p>
         <p>
-          A exclusão remove a conta autenticada e os dados em nuvem vinculados ao seu usuário conforme a função configurada no servidor. Dados salvos apenas no dispositivo podem permanecer no armazenamento local até que você desinstale o app ou limpe os dados do aplicativo no Android.
+          A exclusão remove sua conta e os dados em nuvem vinculados ao seu usuário. Dados salvos apenas no dispositivo podem permanecer no armazenamento local até que você desinstale o app ou limpe os dados do aplicativo no Android.
         </p>
       </div>
 
@@ -357,18 +357,18 @@
 
     <section class="content-grid" aria-label="Informações sobre exclusão">
       <article class="card">
-        <h2>O que será solicitado ao servidor</h2>
+        <h2>O que será excluído</h2>
         <ul>
-          <li>Login via Supabase Auth usando e-mail e senha.</li>
-          <li>Envio do token da sessão para a Edge Function `delete-account`.</li>
-          <li>Exclusão de `public.user_plans` e da conta em Supabase Auth, conforme sua função.</li>
+          <li>Sua conta de acesso ao Guardi.</li>
+          <li>Dados em nuvem vinculados ao seu usuário.</li>
+          <li>Informações associadas ao seu plano, quando existirem.</li>
         </ul>
       </article>
 
       <article class="card">
-        <h2>O que não fica exposto no site</h2>
+        <h2>Confirmação de identidade</h2>
         <p>
-          A chave administrativa `SUPABASE_SERVICE_ROLE_KEY` fica somente na Edge Function. Esta página usa apenas a chave pública anônima do Supabase para autenticar o usuário.
+          Para proteger sua conta, pedimos o mesmo e-mail e senha usados no app. Assim confirmamos que a solicitação está sendo feita pelo titular da conta.
         </p>
       </article>
 
@@ -388,7 +388,7 @@
     </section>
 
     <p class="notice">
-      <strong>Configuração:</strong> preencha `SUPABASE_ANON_KEY` no script desta página com a chave pública anônima do projeto. Não coloque a `SERVICE_ROLE_KEY` aqui.
+      <strong>Atenção:</strong> depois de concluída, a exclusão da conta não poderá ser desfeita.
     </p>
   </main>
 
@@ -416,7 +416,7 @@
       const messages = {
         unauthorized: "Sessão inválida. Confira e-mail e senha e tente novamente.",
         method_not_allowed: "Método não permitido pela função de exclusão.",
-        server_misconfigured: "A função de exclusão está sem configuração no servidor.",
+        server_misconfigured: "A exclusão está indisponível no momento. Tente novamente mais tarde.",
         plan_delete_failed: "Não foi possível remover dados vinculados ao plano.",
         auth_delete_failed: "Não foi possível excluir a conta de autenticação.",
       };
