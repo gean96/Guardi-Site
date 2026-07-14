@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Guardi: app para organizar registros da casa, carro, compras, garantias, gastos e compromissos em um só lugar.">
   <title>Guardi | Organização para casa, carro e rotina</title>
+  <link rel="icon" href="assets/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="assets/guardi-icon.png">
+  <link rel="apple-touch-icon" href="assets/guardi-icon.png">
   <style>
     :root {
       --surface: #f8f9fa;
@@ -189,7 +192,45 @@
       flex-wrap: wrap;
       gap: 14px;
       align-items: center;
-      margin-bottom: 34px;
+      margin-bottom: 16px;
+    }
+
+    .test-notice {
+      max-width: 610px;
+      margin: 0 0 34px;
+      padding: 14px 16px;
+      border-radius: 16px;
+      border: 1px solid rgba(0, 108, 82, 0.22);
+      background: rgba(121, 249, 206, 0.16);
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .test-notice a {
+      color: var(--primary-strong);
+      font-weight: 750;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    .cta-actions {
+      display: grid;
+      gap: 14px;
+      justify-items: start;
+    }
+
+    .cta-note {
+      max-width: 280px;
+      margin: 0;
+      color: rgba(255, 255, 255, 0.82);
+      font-size: 0.92rem;
+    }
+
+    .cta-note a {
+      color: #ffffff;
+      font-weight: 750;
+      text-decoration: underline;
+      text-underline-offset: 2px;
     }
 
     .hero-points {
@@ -515,6 +556,13 @@
       font-size: 1.06rem;
     }
 
+    .cta p a {
+      color: #ffffff;
+      font-weight: 750;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
     .store-button {
       display: inline-grid;
       min-width: 206px;
@@ -648,7 +696,7 @@
         <a href="#como-funciona">Como funciona</a>
         <a href="termos.html">Termos de uso</a>
         <a href="exclusao-dados.html">Excluir dados</a>
-        <a class="button primary" href="#">Play Store</a>
+        <a class="button primary" href="https://play.google.com/apps/testing/com.gfsolutions.guardi" target="_blank" rel="noopener noreferrer">Play Store</a>
       </div>
     </nav>
   </header>
@@ -663,9 +711,15 @@
             Um app para registrar acontecimentos, compras, manutenções, contas, garantias e compromissos do dia a dia. Tudo organizado para você consultar quando precisar.
           </p>
           <div class="hero-actions">
-            <a class="button primary" href="#">Baixar na Play Store</a>
+            <a class="button primary" href="https://play.google.com/apps/testing/com.gfsolutions.guardi" target="_blank" rel="noopener noreferrer">Baixar na Play Store</a>
             <a class="button secondary" href="#recursos">Ver recursos</a>
           </div>
+          <p class="test-notice">
+            Por enquanto o Guardi está em <strong>teste fechado</strong>.
+            Para participar e liberar o download, entre no grupo
+            <a href="https://groups.google.com/g/gf-solutions" target="_blank" rel="noopener noreferrer">GfSolutions</a>
+            e depois acesse o link da Play Store.
+          </p>
           <div class="hero-points" aria-label="Destaques do Guardi">
             <div class="point"><strong>Offline-first</strong>Seus registros começam no dispositivo.</div>
             <div class="point"><strong>Anexos</strong>Guarde fotos, comprovantes e notas fiscais.</div>
@@ -783,13 +837,24 @@
     <section class="cta" aria-label="Baixar Guardi">
       <div class="shell cta-box">
         <div>
-          <h2>Em breve na Play Store</h2>
-          <p>O Guardi será publicado para Android. Enquanto o link oficial não está disponível, o botão já fica preparado para receber o endereço da loja.</p>
+          <h2>Disponível em teste fechado</h2>
+          <p>
+            O Guardi já está na Play Store para testers convidados.
+            Entre no grupo
+            <a href="https://groups.google.com/g/gf-solutions" target="_blank" rel="noopener noreferrer">GfSolutions</a>
+            para liberar o acesso e depois baixe o app.
+          </p>
         </div>
-        <a class="store-button" href="#" aria-label="Baixar Guardi na Play Store">
-          <small>Disponível em breve na</small>
-          <strong>Play Store</strong>
-        </a>
+        <div class="cta-actions">
+          <a class="store-button" href="https://play.google.com/apps/testing/com.gfsolutions.guardi" target="_blank" rel="noopener noreferrer" aria-label="Baixar Guardi na Play Store">
+            <small>Teste fechado na</small>
+            <strong>Play Store</strong>
+          </a>
+          <p class="cta-note">
+            Precisa de convite?
+            <a href="https://groups.google.com/g/gf-solutions" target="_blank" rel="noopener noreferrer">Entre no grupo do Google</a>.
+          </p>
+        </div>
       </div>
     </section>
   </main>
@@ -800,7 +865,8 @@
       <div class="footer-links">
         <a href="termos.html">Termos de uso</a>
         <a href="exclusao-dados.html">Excluir dados</a>
-        <a href="#">Play Store</a>
+        <a href="https://play.google.com/apps/testing/com.gfsolutions.guardi" target="_blank" rel="noopener noreferrer">Play Store</a>
+        <a href="https://groups.google.com/g/gf-solutions" target="_blank" rel="noopener noreferrer">Grupo de testes</a>
       </div>
     </div>
   </footer>
